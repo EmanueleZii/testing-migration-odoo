@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_test_vecchia_tabella_tree" model="ir.ui.view">
+        <field name="name">test.vecchia_tabella.tree</field>
+        <field name="model">test.vecchia_tabella</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />    
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_test_vecchia_tabella_form" model="ir.ui.view">
+        <field name="name">test.vecchia_tabella.form</field>
+        <field name="model">test.vecchia_tabella</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                       <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_test_vecchia_tabella" model="ir.actions.act_window">
+        <field name="name">Test Vecchio</field>
+        <field name="res_model">test.vecchia_tabella</field> <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_test_vecchio_root"
+        name="Test App Migration" />
+    
+    <menuitem
+        id="menu_test_vecchio_action"
+        name="Dati Tabella"
+        parent="menu_test_vecchio_root"
+        action="action_test_vecchia_tabella"
+        sequence="10"
+        />
+</odoo>
