@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_test_vecchio_tree" model="ir.ui.view">
+        <field name="name">test.vecchio.tree</field>
+        <field name="model">test.vecchio</field>
+        <field name="arch"  type="xml">
+            <tree>
+                <field name="name" />    
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_test_vecchio_form" model="ir.ui.view">
+        <field name="name">test.vecchio.form</field>
+        <field name="model">test.vecchio</field>
+        <field name="arch"  type="xml">
+            <form>
+                <sheet>
+                    <group>
+                       <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_test_vecchio" model="ir.actions.act_window">
+        <field name="name">test Vecchio</field>
+        <field name="res_model">test.vecchio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_test_vecchio_root"
+        name="Test App" />
+    
+    <menuitem
+        id="menu_test_vecchio_action"
+        parent="menu_test_vecchio_root"
+        action="action_test_vecchio"
+        />
+
+</odoo>
