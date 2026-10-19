@@ -1,3 +1,7 @@
+### Vari test di migration di moduli per odoo che ho realizzato nel corso del tirocinio odoo developer (Python)
+
+
+
 Step 1: Crea la cartella del modulo
 Vai nella tua cartella degli addons (quella mappata nel Docker) e crea questa struttura:
 
